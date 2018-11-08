@@ -1,0 +1,18 @@
+@import "imports"
+
+.text-vertical
+  position: absolute
+  +flex-center
+  $color: $orange
+  color: $color
+  font-size: 12px
+  font-weight: 500
+  transform-origin: 100%
+  transform: rotate(-90deg)
+  &:after
+    position: absolute
+    left: calc(100% + 20px)
+    content: ''
+    width: 180px
+    height: 1px
+    background-color: $color

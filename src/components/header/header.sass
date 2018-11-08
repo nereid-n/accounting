@@ -1,0 +1,35 @@
+@import "../../shared/sass/imports"
+
+.header
+  &__nav
+    +flex-wrap-center
+    padding: 20px 0
+  &__menu
+    +list
+    +flex-wrap-center
+    &-item
+      display: inline-block
+      padding: 5px 15px
+      text-decoration: none
+      color: inherit
+      text-transform: uppercase
+      font-weight: 700
+      &:hover
+        color: $orange
+    &-btn
+      +btn
+      $width: 19px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: $width
+      height: 12px
+      padding: 0
+      margin-right: 10px
+      span
+        width: $width
+        height: 2px
+        background-color: $main
+  &__text-vertical
+    right: 0
+    top: 190px

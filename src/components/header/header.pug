@@ -1,0 +1,22 @@
+mixin header()
+  header.header-wrap
+    .container.pos-relative
+      span.header__text-vertical.text-vertical более 2564 постоянных клиентов
+      +b.header
+        +e('nav').nav
+          +e('button').menu-btn
+            span
+            span
+            span
+          +e('ul').menu
+            -
+              var menu = [
+                'Новости',
+                'О нас',
+                'Цены',
+                'Партнеры',
+                'Контакты'
+              ]
+            each item in menu
+              li
+                +e('a').menu-item(href='#')= item

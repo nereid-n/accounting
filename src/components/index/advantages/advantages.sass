@@ -1,2 +1,22 @@
+@import "../../../shared/sass/imports"
+
 .advantages
-	display: block
+  +flex-wrap-center-h
+  &-wrap
+    padding: 110px 0 90px
+  &__item
+    +flex-wrap-center-h
+    $width: 220px
+    max-width: $width
+    min-width: $width
+    padding: 15px
+    text-align: center
+  &__text
+    font-size: 16px
+  &__number
+    font-size: 52px
+    font-family: $bebasNeue
+    font-weight: 700
+  &__img
+    margin-bottom: 15px
+    margin-right: -10px

@@ -2,3 +2,58 @@ mixin footer()
   footer.footer-wrap
     .container
       +b.footer
+        .row
+          .col-lg-2.col-sm-12.d-flex.align-items-center.justify-content-center
+            -
+              var items1 = [
+                'assets/images/icons/icon-vk.png',
+                'assets/images/icons/icon-fb.png',
+                'assets/images/icons/icon-inst.png'
+              ]
+            each item in items1
+              +e('a').social(href='#')
+                img(src= item)
+          +e.item.col-lg-4.col-md-5.col-sm-8
+            -
+              var items2 = [
+                'Бухгалтерское сопровождение',
+                'Аутсорсинг бухгалтерии',
+                'Бухгалтерские консультации',
+                'Регистрация ООО',
+                'Регистрация ИП',
+                'Бухгалтерское сопровождение ООО',
+                'Бухгалтерское сопровождение ИП'
+              ]
+            each item in items2
+              +e('a').link(href='#')= item
+          +e.item.col-lg-3.col-md-3.col-sm-4
+            -
+              var items3 = [
+                'Мой заказ',
+                'Заявка',
+                'Контакты',
+                'Цены',
+                'Блог',
+                'Оферта для ОС',
+                'Оферта для УСН'
+              ]
+            each item in items3
+              +e('a').link(href='#')= item
+          +e.item.col-lg-3.col-md-4
+            +e('span').contacts Контакты
+            .d-flex
+              +e.icon
+                img(src='assets/images/icons/icon-place.png')
+              .d-flex.flex-column
+                span 127051, Москва
+                span ул. Артема 12, стр. 28
+            .d-flex
+              +e.icon
+                img(src='assets/images/icons/icon-phone.png')
+              .d-flex.flex-column
+                span 8(800) 250-3-052
+            .d-flex
+              +e.icon
+                img(src='assets/images/icons/icon-mail.png')
+              .d-flex.flex-column
+                span info@finguru.com

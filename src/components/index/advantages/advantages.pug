@@ -1,3 +1,34 @@
 mixin advantages()
-	+b.advantages
-		block
+  section.advantages-wrap
+    .container
+      +b.advantages
+        -
+          var items = [
+            {
+              number: '2365',
+              text: 'Довольных клиентов за время работы компании'
+            },
+            {
+              number: '107',
+              text: 'Крупных компаний с нами ежемесячно'
+            },
+            {
+              number: '27',
+              text: 'Миллионов руб. в год экономии на налогах'
+            },
+            {
+              number: '87%',
+              text: 'Выигранных судебных дел разной сложности'
+            },
+            {
+              number: '93%',
+              text: 'Клиентов обращаются к нам повторно'
+            }
+          ]
+        each item, index in items
+          - var i = index + 1
+          +e.item
+            .d-flex.align-items-center
+              +e('img').img(src=`assets/images/icons/icon-advantages${i}.png`)
+              +e('span').number= item.number
+            +e('p').text= item.text

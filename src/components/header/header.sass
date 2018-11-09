@@ -1,8 +1,13 @@
 @import "../../shared/sass/imports"
 
 .header
+  &-wrap
+    position: relative
+    max-width: 100%
   &__nav
     +flex-wrap-center
+    position: relative
+    z-index: 1
     padding: 20px 0
   &__menu
     +list
@@ -25,11 +30,79 @@
       width: $width
       height: 12px
       padding: 0
-      margin-right: 10px
+      margin: 10px 10px 10px 0
       span
         width: $width
         height: 2px
         background-color: $main
   &__text-vertical
+    z-index: 1
     right: 0
     top: 190px
+  &__main
+    +flex-wrap
+  $textWidth: 56%
+  $imgWidth: 100% - $textWidth
+  $textWidth2: 60%
+  $imgWidth2: 100% - $textWidth2
+  &__text
+    position: relative
+    z-index: 1
+    display: flex
+    flex-direction: column
+    margin: 70px 0 50px
+    width: $textWidth
+    @media(max-width: $xl)
+      width: $textWidth2
+    @media(max-width: $lg)
+      width: 100%
+  &__photo
+    position: relative
+    width: $imgWidth
+    @media(max-width: $xl)
+      width: $imgWidth2
+    @media(max-width: $lg)
+      display: flex
+      justify-content: center
+      align-items: flex-end
+      width: 100%
+    img
+      position: relative
+      display: block
+      margin-left: -30px
+      @media(max-width: $xl)
+        margin-left: 0
+  &__main-text
+    $fz: 17px
+    $lh: 1.2
+    height: $fz * $lh * 3
+    margin-left: 65px
+    margin-bottom: 25px
+    line-height: $lh
+    font-size: $fz
+    font-weight: 500
+    overflow: hidden
+    @media (max-width: $sm)
+      margin-left: 20px
+  &__down
+    position: absolute
+    bottom: 20px
+    left: 50%
+    display: flex
+    align-items: center
+    margin-top: auto
+    color: $orange
+    transform: translateX(-50%)
+    @media (max-width: $lg)
+      display: none
+    img
+      margin-right: 15px
+  &__circle1
+    top: -230px
+    left: -100px
+  &__circle2
+    left: -10px
+    bottom: -130px
+    @media(max-width: $lg)
+      left: unset
+      margin-left: 10%

@@ -1,3 +1,18 @@
 mixin packages()
-	+b.packages
-		block
+  section.packages-wrap
+    .container
+      +b.packages
+        h2.title Предлагаем следующие пакеты услуг
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        +e.slider
+          - for (var i = 0; i < 10; i++)
+            +e.item
+              +e('span').item-title УСН доходы
+              +e.item-img
+                img(src='assets/images/icons/icon-packages.png')
+              +e('span').item-price  2 968 ₽ <span class='month'>мес</span>
+              +e('p').item-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              button.btn.btn-sm.btn-white.width100
+                span заказать
+        .text-center
+          +e('a').link(href='#') Просмотреть все тарифы

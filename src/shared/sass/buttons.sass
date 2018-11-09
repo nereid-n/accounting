@@ -1,1 +1,36 @@
 @import "imports"
+
+.btn
+  +btn($orange)
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding: 12px 25px
+  font-size: 15px
+  font-family: $lato
+  font-weight: 900
+  text-transform: uppercase
+  color: #ffffff
+  line-height: 1
+  border-radius: 20px
+  transition: $transition
+  &:hover
+    color: #ffffff
+    background-color: darken($orange, 5)
+    box-shadow: $shadow
+  &-slider
+    +btn($orange)
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    width: 42px
+    height: 42px
+    border-radius: 50%
+  &-white
+    color: $main
+    background-color: #fff
+    border: 1px solid
+  &-sm
+    padding: 7px 25px
+    font-size: 13px

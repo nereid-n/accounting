@@ -1,3 +1,14 @@
 mixin partners()
-	+b.partners
-		block
+  section.partners-wrap
+    .container
+      +b.partners
+        .d-flex.align-items-lg-center.flex-lg-row.flex-column
+          +e('h2').title.title Наши партнеры
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        +e.slider
+          - for (var i = 1; i < 8; i++)
+            - var item
+            - if (i > 4) item = i - 4
+            - else item = i
+            +e.item
+              img(src=`assets/images/partners${item}.png`)

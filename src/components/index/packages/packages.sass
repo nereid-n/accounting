@@ -1,2 +1,76 @@
+@import "../../../shared/sass/imports"
+
 .packages
-	display: block
+  &-wrap
+    padding: 30px 0 40px
+    background-color: #fff
+  &__slider
+    width: 900px
+    max-width: calc(100% - 80px)
+    margin: 0 auto
+    .slick-list
+      padding: 50px 0 35px
+  &__item
+    display: flex !important
+    flex-direction: column
+    align-items: center
+    padding: 20px 35px
+    text-align: center
+    @media (min-width: $md + 1)
+      &.slick-current + .slick-active
+        z-index: 1
+        margin-top: -15px
+        box-shadow: $shadow
+        .btn-white
+          $bg: $orange
+          color: #ffffff
+          border: 1px solid $bg
+          background-color: $bg
+          span
+            opacity: 0.7
+    @media (max-width: $md)
+      &.slick-current
+        z-index: 1
+        margin-top: -15px
+        box-shadow: $shadow
+        .btn-white
+          $bg: $orange
+          color: #ffffff
+          border: 1px solid $bg
+          background-color: $bg
+          span
+            opacity: 0.7
+    &-title
+      padding: 0 10px
+      font-size: 22px
+      font-weight: 800
+      text-transform: uppercase
+    &-text
+      margin: 15px 0 25px
+      font-family: $lato
+      font-size: 10px
+      color: #4f5362
+      line-height: 1.5
+    &-img
+      $size: 90px
+      +flex-center
+      width: $size
+      height: $size
+      padding: 10px
+    &-price
+      font-family: $monserrat
+      font-weight: 900
+      font-size: 22px
+      .month
+        font-family: $gilroy
+        font-weight: 800
+  &__btn
+    top: 50%
+    z-index: 1
+    transform: translateY(-50%)
+  &__prev
+    right: 100%
+  &__next
+    left: 100%
+  &__link
+    color: inherit

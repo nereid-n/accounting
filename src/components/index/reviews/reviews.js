@@ -9,6 +9,14 @@ if ($('.reviews__img-slider').length > 0) {
 if ($('.reviews__text-slider').length > 0) {
   $('.reviews__text-slider').slick({
     asNavFor: '.reviews__img-slider',
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          adaptiveHeight: true
+        }
+      }
+    ]
   });
 }

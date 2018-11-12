@@ -35,6 +35,8 @@
       text-align: center
       background-color: #fff
       box-shadow: $shadow
+      @media (max-width: $lg)
+        padding-bottom: 0
   &__bg
     position: absolute
     bottom: -60px
@@ -49,6 +51,7 @@
     $margin: 25px
     @media (max-width: $lg)
       width: 50%
+      box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.1)
     @media (max-width: $sm)
       width: 100%
     &:hover
@@ -70,6 +73,10 @@
       align-items: center
       padding-top: $margin
       font-weight: 700
+      @media (max-width: $lg)
+        display: flex
+        &:after
+          background-color: #fff !important
       &:after
         position: absolute
         content: ''
@@ -77,6 +84,8 @@
         width: 118px
         height: 1px
         background-color: #fff
+        @media (max-width: $lg)
+          background-color: $main
   &__img
     $size: 90px
     width: $size

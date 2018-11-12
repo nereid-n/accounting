@@ -1,3 +1,27 @@
 mixin reviews()
-	+b.reviews
-		block
+  section.reviews-wrap
+    .container.pos-relative
+      span.reviews__text-vertical.text-vertical более 2564 постоянных клиентов
+      +b.reviews
+        +e.text
+          h2.title Преимущества работы с нами словами ведущих партнеров
+          +e.text-slider
+            +e.text-slider-item
+              .d-flex.flex-column.text-right
+                span.fz18.fw-semi-bold Дмитриенко Анна Александровна
+                span директор ООО "Дайнего"
+              p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            +e.text-slider-item
+              .d-flex.flex-column.text-right
+                span.fz18.fw-semi-bold Дмитриенко Анна Александровна
+                span директор ООО "Дайнего"
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus facere ipsam itaque, labore minima modi nesciunt sequi vel. Iure, placeat.
+        +e.img
+          +e.img-bg
+            img(src='assets/images/bg/bg-advantages-dots.png')
+          +e.img-slider
+            +e.img-slider-item
+              img(src='assets/images/slider-girl.png')
+            +e.img-slider-item
+              img(src='assets/images/slider-girl.png')

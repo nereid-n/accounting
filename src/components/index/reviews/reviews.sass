@@ -1,2 +1,51 @@
+@import "../../../shared/sass/imports"
+
 .reviews
-	display: block
+  $widthText: 55%
+  $widthImg: 100% - $widthText
+  +flex-wrap
+  &-wrap
+    padding-top: 40px
+  &__text
+    width: $widthText
+    @media (max-width: $lg)
+      width: 100%
+    &-slider
+      margin-top: 60px
+      &-item
+        text-align: justify
+        p
+          margin: 20px 0
+  &__img
+    position: relative
+    width: $widthImg
+    margin-top: -65px
+    padding-left: 50px
+    @media (max-width: $lg)
+      width: 100%
+      margin-top: 20px
+      padding-left: 0
+    &-slider
+      &-item
+        display: flex !important
+        justify-content: center
+        align-items: center
+    &-bg
+      position: absolute
+      bottom: 12%
+      right: -5%
+  &__prev
+    top: 38%
+    left: 13%
+    @media (max-width: $xl)
+      left: 5%
+  &__next
+    bottom: 13%
+    right: 14%
+    @media (max-width: $xl)
+      right: 9%
+  &__text-vertical
+    top: 154px
+    left: -260px
+    @media (max-width: 1350px)
+      left: -200px

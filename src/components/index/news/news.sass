@@ -1,2 +1,72 @@
+@import "../../../shared/sass/imports"
+
 .news
-	display: block
+  position: relative
+  z-index: 3
+  &-circle1
+    top: -160px
+    left: -100px
+  &-circle2
+    bottom: -40px
+    right: -160px
+  &-wrap
+    position: relative
+    padding: 30px 0 50px
+  &__items
+    display: flex
+    justify-content: space-between
+    margin: 35px -15px
+    @media (max-width: $lg)
+      overflow-x: scroll
+    @media (max-width: $sm)
+      flex-wrap: wrap
+      margin: 35px 0
+  &__item
+    $fz: 14px
+    $lh: 1.2
+    $m: $fz * $lh
+    $width: 300px
+    min-width: $width
+    max-width: $width
+    padding: 15px
+    margin: 15px
+    box-shadow: $shadow
+    background-color: $bg
+    border-radius: 0 0 3px 3px
+    @media (max-width: $sm)
+      min-width: 100%
+      max-width: 100%
+      margin: 15px 0
+    &-text
+      font-size: $fz
+      line-height: $lh
+      font-family: $myriad
+      height: $fz * $lh * 8 + $m * 2 - 6px
+      overflow: hidden
+      p
+        margin: $m 0
+    &-img
+      margin-top: $m
+      height: 96px
+      img
+        +fit-cover
+    &-title
+      margin: 0 0
+      padding-bottom: $m
+      font-weight: 800
+      font-size: 15px
+      border-bottom: 1px solid transparentize($main, 0.7)
+    &-bottom
+      display: flex
+      font-size: 12px
+      line-height: 1
+      &-text
+        margin: 2px 10px 0 5px
+  &__more
+    display: inline-block
+    margin: 20px 0
+    color: $orange
+    font-size: 12px
+    font-weight: 800
+    &:hover
+      color: $orange

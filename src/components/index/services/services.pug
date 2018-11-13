@@ -10,7 +10,7 @@ mixin services()
           .d-flex.justify-content-end
             a.btn.btn-orange(href='#') подробнее
         +e.main
-          +e('img').bg(src='assets/images/bg/bg-services-dots.png')
+          +e('img').bg(src='assets/images/bg/bg-services-dots.png' alt='')
           +e.main-content
             h2.title.mt0.mb25 Наши услуги
             .d-flex.flex-wrap
@@ -37,8 +37,8 @@ mixin services()
                 - var i = index + 1
                 +e.item
                   +e.img
-                    +e('img').img-white(src=`assets/images/icons/services/icon-services-white${i}.png`)
-                    +e('img').img-black(src=`assets/images/icons/services/icon-services-black${i}.png`)
+                    +e('img').img-white(src=`assets/images/icons/services/icon-services-white${i}.png` alt='')
+                    +e('img').img-black(src=`assets/images/icons/services/icon-services-black${i}.png` alt='')
                   +e('span').item-title #{item.one} <br> #{item.two}
                   +e.item-hover
                     span Ведение ООО

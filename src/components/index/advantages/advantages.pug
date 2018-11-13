@@ -1,5 +1,5 @@
 mixin advantages()
-  section.advantages-wrap
+  div.advantages-wrap
     .container
       +b.advantages
         -
@@ -29,6 +29,6 @@ mixin advantages()
           - var i = index + 1
           +e.item
             .d-flex.align-items-center
-              +e('img').img(src=`assets/images/icons/icon-advantages${i}.png`)
+              +e('img').img(src=`assets/images/icons/icon-advantages${i}.png` alt='')
               +e('span').number= item.number
             +e('p').text= item.text

@@ -12,7 +12,7 @@ mixin footer()
               ]
             each item in items1
               +e('a').social(href='#')
-                img(src= item)
+                img(src= item alt='')
           +e.item.col-lg-4.col-md-5.col-sm-8
             -
               var items2 = [
@@ -43,17 +43,17 @@ mixin footer()
             +e('span').contacts Контакты
             .d-flex
               +e.icon
-                img(src='assets/images/icons/icon-place.png')
+                img(src='assets/images/icons/icon-place.png' alt='')
               .d-flex.flex-column
                 span 127051, Москва
                 span ул. Артема 12, стр. 28
             .d-flex
               +e.icon
-                img(src='assets/images/icons/icon-phone.png')
+                img(src='assets/images/icons/icon-phone.png' alt='')
               .d-flex.flex-column
                 span 8(800) 250-3-052
             .d-flex
               +e.icon
-                img(src='assets/images/icons/icon-mail.png')
+                img(src='assets/images/icons/icon-mail.png' alt='')
               .d-flex.flex-column
                 span info@finguru.com

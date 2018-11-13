@@ -13,20 +13,20 @@ mixin news()
               +e.item-text
                 if i === 1
                   +e.item-img
-                    img(src='assets/images/news-photo.png')
+                    img(src='assets/images/news-photo.png' alt='')
                 else
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Ut enim ad minim veniam, quis nostrud exercitation ullamco...
               +e('a').more(href='#') Читать далее
               +e.item-bottom
                 .d-flex.align-items-center
-                  img(src='assets/images/icons/icon-calendar.png')
-                  +e('item').item-bottom-text.fz11 12 июн в 13:21
+                  img(src='assets/images/icons/icon-calendar.png' alt='')
+                  +e('span').item-bottom-text.fz11 12 июн в 13:21
                 .d-flex.align-items-center.ml-auto
-                  img(src='assets/images/icons/icon-comments.png')
-                  +e('item').item-bottom-text 20
+                  img(src='assets/images/icons/icon-comments.png' alt='')
+                  +e('span').item-bottom-text 20
                 .d-flex.align-items-center
-                  img(src='assets/images/icons/icon-views.png')
-                  +e('item').item-bottom-text 450
+                  img(src='assets/images/icons/icon-views.png' alt='')
+                  +e('span').item-bottom-text 450
         .d-flex.justify-content-center
           a.btn все новости
